@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/game_ocean"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/iv_clock"
+        android:layout_width="126dp"
+        android:layout_height="66dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/clock"
+        app:srcCompat="@drawable/clock" />
+
+    <TextView
+        android:id="@+id/tv_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/iv_clock"
+        android:layout_alignTop="@id/iv_clock"
+        android:layout_alignRight="@id/iv_clock"
+        android:layout_alignBottom="@id/iv_clock"
+        android:gravity="center"
+        android:text="00:00"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_timesup"
+        android:layout_width="310dp"
+        android:layout_height="124dp"
+        android:layout_alignLeft="@id/linearLayout"
+        android:layout_alignTop="@id/linearLayout"
+        android:layout_alignRight="@id/linearLayout"
+        android:layout_alignBottom="@id/linearLayout"
+        android:layout_centerInParent="false"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/time_up" />
+
+    <ImageView
+        android:id="@+id/iv_victory"
+        android:layout_width="310dp"
+        android:layout_height="124dp"
+        android:layout_alignLeft="@id/linearLayout"
+        android:layout_alignTop="@id/linearLayout"
+        android:layout_alignRight="@id/linearLayout"
+        android:layout_alignBottom="@id/linearLayout"
+        android:layout_centerInParent="false"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/victory" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/gamv_lv"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="1"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/game_score"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="500"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="320dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:progressBackgroundTint="@color/red"
+                    android:progressTint="@color/red" />
+
+                <ImageButton
+                    android:id="@+id/ib_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/button_pause"
+                    app:srcCompat="@drawable/button_pause" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/ib_quit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_quit"
+                    app:srcCompat="@drawable/button_quit" />
+
+                <ImageButton
+                    android:id="@+id/ib_retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_retry"
+                    app:srcCompat="@drawable/button_retry" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
